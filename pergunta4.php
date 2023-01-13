@@ -1,27 +1,27 @@
 <?php
-if(isset($_POST['submit']))
-{
-$name= $_POST['resposta3'];
+
 // conexão com o banco de dados modelo padrão do php
 
   $dbHost ='Localhost';
   $dbUsername = 'root';
-  $dbPassword =''; 
+  $dbPassword ='';
   $dbName = 'totem_senai';
 
   $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
 
   // info bd
- $result_cadsatro = "insert into respostas (resposta3) values ('$name')";
- $resultado_cadsatro = mysqli_query($conexao, $result_cadsatro);
-}
+  $name= $_POST['resposta'];
+
+ $result_cadastro = "insert into respostas (resposta3) values ('$name')";
+ $resultado_cadastro = mysqli_query($conexao, $result_cadastro);
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title>pergunta</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -58,21 +58,14 @@ $name= $_POST['resposta3'];
             </div>
         </div>
         <!-- Spinner End -->
-< <!-- Sidebar Start -->
+ <!-- Sidebar Start -->
 <div class="sidebar pe-4 pb-3">
     <nav class="navbar bg-light navbar-light">
             <h3 class="text-primary">Totem senai</h3>
 
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Perguntas</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="pergunta1.php" class="dropdown-item">pergunta 1</a>
-                    <a href="pergunta2.php" class="dropdown-item">pergunta 2</a>
-                    <a href="pergunta3.php" class="dropdown-item">pergunta 3</a>
                     <a href="pergunta4.php" class="dropdown-item">pergunta 4</a>
-                    <a href="pergunta5.php" class="dropdown-item">pergunta 5</a>
-                    <a href="pergunta6.php" class="dropdown-item">pergunta 6</a>
-                    <a href="pergunta7.php" class="dropdown-item">pergunta 7</a>
-                    <a href="pergunta8.php" class="dropdown-item">pergunta 8</a>
                 </div>
             </div>
         </div>
@@ -112,13 +105,16 @@ $name= $_POST['resposta3'];
             <div class="container-fluid pt-4 px-4">
                 <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0">
                     <div class="col-md-6 text-center">
-                        <h3>Quais as chances de você indicar de 0 à 10 o centro de formação SENAI, para um amigo ou familiar?</h3>
+                        <h3>Quais as chances de você indicar o centro de formação SENAI, para um amigo ou familiar?</h3>
                         <div class="bg-light rounded h-100 p-4">
-                            <div class="btn-group" role="group">
-                                <button href="pergunta5.php" type="submit" name="resposta4" class="btn btn-danger">Ruim</button>
-                                <button href="pergunta5.php" type="submit" name="resposta4" class="btn btn-warning">Médio</button>
-                                <button href="pergunta5.php" type="submit" name="resposta4" class="btn btn-success">Bom</button>
-                            </div>
+                        <div class="btn-group" role="group">
+                            <a href="pergunta5.php"> <input class="btn btn-danger" name="resposta1" type="submit"
+                                value="Não"></a>
+                        <a href="pergunta5.php"> <input class="btn btn-warning" name="resposta1" type="submit"
+                                value="Talvez"></a>
+                        <a href="pergunta5.php"> <input class="btn btn-success" name="resposta1" type="submit"
+                                value="Com certeza"></a>
+                        </div>
                         </div>
                     </div>
                 </div>

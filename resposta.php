@@ -1,19 +1,20 @@
 <?php
+if(isset($_POST['submit']))
+{
+$name= $_POST['resposta5'];
 // conexão com o banco de dados modelo padrão do php
 
   $dbHost ='Localhost';
   $dbUsername = 'root';
-  $dbPassword ='';
+  $dbPassword =''; 
   $dbName = 'totem_senai';
 
   $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
 
   // info bd
-  $name= $_POST['resposta'];
-
- $result_cadastro = "insert into respostas (resposta2) values ('$name')";
- $resultado_cadastro = mysqli_query($conexao, $result_cadastro);
-
+ $result_cadsatro = "insert into respostas (resposta5) values ('$name')";
+ $resultado_cadsatro = mysqli_query($conexao, $result_cadsatro);
+}
  ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title>respostas</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -33,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -65,7 +66,8 @@
 
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Perguntas</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="pergunta3.php" class="dropdown-item">pergunta 3</a>
+                    <a href=".php" class="dropdown-item">resposta</a>
+                    
                 </div>
             </div>
         </div>
@@ -101,32 +103,44 @@
 
 
             <!-- Blank Start -->
-            <form method="POST" action="pergunta4.php">
-            <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0">
-                    <div class="col-md-6 text-center">
-                        <h3>Como você avalia o tempo de resposta no atendimento?</h3>
+            <div class="col-sm-12 col-xl-12">
                         <div class="bg-light rounded h-100 p-4">
-                        <div class="btn-group" role="group">
-                            <a href="pergunta4.php"> <input class="btn btn-danger" name="resposta" type="submit" 
-                                value="regular"></a>
-                        <a href="pergunta4.php"> <input class="btn btn-warning" name="resposta" type="submit" 
-                                value="Bom"></a>
-                        <a href="pergunta4.php"> <input class="btn btn-success" name="resposta" type="submit" 
-                                value="Ótimo"></a>
+                            <h6 class="mb-4">Resultado</h6>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">pesquisa</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>jhon@email.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>mark@email.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>jacob@email.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </div>
-            </div>
-            </form>
             <!-- Blank End -->
 
         </div>
-        <!-- Content End -->
-
-
-        <!-- Back to Top -->
-        
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

@@ -50,13 +50,6 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Perguntas</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <a href="pergunta1.php" class="dropdown-item">pergunta 1</a>
-                    <a href="pergunta2.php" class="dropdown-item">pergunta 2</a>
-                    <a href="pergunta2.php" class="dropdown-item">pergunta 3</a>
-                    <a href="pergunta2.php" class="dropdown-item">pergunta 4</a>
-                    <a href="pergunta2.php" class="dropdown-item">pergunta 5</a>
-                    <a href="pergunta2.php" class="dropdown-item">pergunta 6</a>
-                    <a href="pergunta2.php" class="dropdown-item">pergunta 7</a>
-                    <a href="pergunta2.php" class="dropdown-item">pergunta 8</a>
                 </div>
             </div>
         </div>
@@ -98,14 +91,13 @@
                     <div class="col-md-6 text-center">
                         <h3>Escolha a palavra que melhor define o nosso produto ou serviço.</h3>
                         <div class="bg-light rounded h-100 p-4">
-                            <div class="btn-group" role="group">
-                            <a href="/pergunta2.php"> <input class="btn btn-danger" name="resposta" type="submit" 
-                                value="Ótimo"></a>
-                        <a href="/pergunta2.php"> <input class="btn btn-warning" name="resposta" type="submit" 
+                        <div class="btn-group" role="group">
+                            <a href="pergunta2.php"> <input class="btn btn-danger" name="resposta" type="submit" 
+                                value="regular"></a>
+                        <a href="pergunta2.php"> <input class="btn btn-warning" name="resposta" type="submit" 
                                 value="Bom"></a>
-                        <a href="/pergunta2.php"> <input class="btn btn-success" name="resposta" type="submit" 
-                                value="Regular"></a>
-                            </div>
+                        <a href="pergunta2.php"> <input class="btn btn-success" name="resposta" type="submit" 
+                                value="Ótimo"></a>
                         </div>
                     </div>
                 </div>

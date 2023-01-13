@@ -1,7 +1,5 @@
 <?php
-if(isset($_POST['submit']))
-{
-$name= $_POST['resposta8'];
+
 // conexão com o banco de dados modelo padrão do php
 
   $dbHost ='Localhost';
@@ -12,9 +10,11 @@ $name= $_POST['resposta8'];
   $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
 
   // info bd
- $result_cadsatro = "insert into respostas (resposta1) values ('$name')";
- $resultado_cadsatro = mysqli_query($conexao, $result_cadsatro);
-}
+  $name= $_POST['resposta'];
+
+ $result_cadastro = "insert into respostas (resposta1) values ('$name')";
+ $resultado_cadastro = mysqli_query($conexao, $result_cadastro);
+
  ?>
 
 <!DOCTYPE html>

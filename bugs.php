@@ -1,4 +1,5 @@
 <?php
+
 // conexão com o banco de dados modelo padrão do php
 
   $dbHost ='Localhost';
@@ -11,17 +12,16 @@
   // info bd
   $name= $_POST['resposta'];
 
- $result_cadastro = "insert into respostas (resposta2) values ('$name')";
+ $result_cadastro = "insert into respostas (resposta3) values ('$name')";
  $resultado_cadastro = mysqli_query($conexao, $result_cadastro);
 
  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title>pergunta</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -33,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -58,14 +58,14 @@
             </div>
         </div>
         <!-- Spinner End -->
-< <!-- Sidebar Start -->
+ <!-- Sidebar Start -->
 <div class="sidebar pe-4 pb-3">
     <nav class="navbar bg-light navbar-light">
             <h3 class="text-primary">Totem senai</h3>
 
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Perguntas</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="pergunta3.php" class="dropdown-item">pergunta 3</a>
+                    <a href="pergunta4.php" class="dropdown-item">pergunta 4</a>
                 </div>
             </div>
         </div>
@@ -101,19 +101,47 @@
 
 
             <!-- Blank Start -->
-            <form method="POST" action="pergunta4.php">
+            <form method="POST" action="pergunta5.php">
             <div class="container-fluid pt-4 px-4">
                 <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0">
                     <div class="col-md-6 text-center">
-                        <h3>Como você avalia o tempo de resposta no atendimento?</h3>
+                        <h3>Quais as chances de você indicar de 0 à 10 o centro de formação SENAI, para um amigo ou familiar?</h3>
                         <div class="bg-light rounded h-100 p-4">
                         <div class="btn-group" role="group">
-                            <a href="pergunta4.php"> <input class="btn btn-danger" name="resposta" type="submit" 
-                                value="regular"></a>
-                        <a href="pergunta4.php"> <input class="btn btn-warning" name="resposta" type="submit" 
-                                value="Bom"></a>
-                        <a href="pergunta4.php"> <input class="btn btn-success" name="resposta" type="submit" 
-                                value="Ótimo"></a>
+
+                                <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="0">
+                                <a href="/pergunta5.php"><label class="btn btn-outline-primary" >0</label></a>
+
+                               <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="1">
+                               <a href="pergunta5.php"><label class="btn btn-outline-primary" >1</label></a>
+
+                                <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="2">
+                                <a href="pergunta5.php"><label class="btn btn-outline-primary" >2</label></a>
+
+                               <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="3">
+                               <a href="pergunta5.php"><label class="btn btn-outline-primary" >3</label></a>
+
+                               <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="4">
+                               <a href="pergunta5.php"><label class="btn btn-outline-primary" >4</label></a>
+
+                               <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="5">
+                               <a href="pergunta5.php"><label class="btn btn-outline-primary" >5</label></a>
+
+                               <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="6">
+                               <a href="pergunta5.php"><label class="btn btn-outline-primary" >6</label></a>
+
+                               <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="7">
+                               <a href="pergunta5.php"><label class="btn btn-outline-primary" >7</label></a>
+
+                               <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="8">
+                               <a href="pergunta5.php"><label class="btn btn-outline-primary" >8</label></a>
+
+                               <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="9">
+                               <a href="pergunta5.php"><label class="btn btn-outline-primary" >9</label></a>
+
+                               <input type="submit" class="btn-check" name="resposta"  autocomplete="off" value="10">
+                               <a href="pergunta5.php"><label class="btn btn-outline-primary" >10</label></a>
+                            </div>
                         </div>
                     </div>
                 </div>
