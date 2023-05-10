@@ -144,4 +144,36 @@ class Resposta{
                                   ->fetchObject(self::class);
   }
 
+  public static function getRespostas1(){
+    return (new Database('respostas'))->countRespostas1($connection = null);
+  }
+
+  public static function getRespostas2(){
+    return (new Database('respostas'))->countRespostas2($connection = null);
+  }
+
+  public static function getRespostas3(){
+    return (new Database('respostas'))->countRespostas3($connection = null);
+  }
+
+  public static function getRespostas4(){
+    return (new Database('respostas'))->countRespostas4($connection = null);
+  }
+
+  public static function getRespostas5(){
+    return (new Database('respostas'))->countRespostas5($connection = null);
+  }
+
+  public static function getRespostas6(){
+    return (new Database('respostas'))->countRespostas6($connection = null);
+  }
+
+  public static function getRespostas7(){
+    return (new Database('respostas'))->countRespostas7($connection = null);
+  }
+
+  public static function getRespostas8(){
+    return (new Database('respostas'))->countRespostas8($connection = null);
+  }
+
 }

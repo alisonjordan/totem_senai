@@ -157,4 +157,217 @@ class Database{
     return true;
   }
 
+
+
+############ AQUI COMEÇAM AS CONSULTAS PARA GERAÇÃO DE RELATÓRIO ####################################
+
+##PERGUNTA 1: Como você avalia a qualidade do atendimento que recebeu?
+
+  public function countRespostas1($connection) {
+    $queryExcelente = "SELECT COUNT(resposta1) as excelente FROM respostas WHERE resposta1 = 'Excelente'";
+    $queryBom = "SELECT COUNT(resposta1) as bom FROM respostas WHERE resposta1 = 'Bom'";
+    $queryRegular = "SELECT COUNT(resposta1) as regular FROM respostas WHERE resposta1 = 'Regular'";
+    $queryRuim = "SELECT COUNT(resposta1) as ruim FROM respostas WHERE resposta1 = 'Ruim'";
+  
+    $stmtExcelente =  $this->execute($queryExcelente);
+    $stmtBom = $this->execute($queryBom);
+    $stmtRegular = $this->execute($queryRegular);
+    $stmtRuim = $this->execute($queryRuim);
+  
+    $excelenteCount = $stmtExcelente->fetch(PDO::FETCH_ASSOC)['excelente'];
+    $bomCount = $stmtBom->fetch(PDO::FETCH_ASSOC)['bom'];
+    $regularCount = $stmtRegular->fetch(PDO::FETCH_ASSOC)['regular'];
+    $ruimCount = $stmtRuim->fetch(PDO::FETCH_ASSOC)['ruim'];
+  
+    return array(
+      'Excelente' => $excelenteCount,
+      'Bom' => $bomCount,
+      'Regular' => $regularCount,
+      'Ruim' => $ruimCount
+    );
+  }
+
+  ##PERGUNTA 2: O atendente foi prestativo e solícito em ajudar com suas questões e problemas?
+
+  public function countRespostas2($connection) {
+    $queryExcelente = "SELECT COUNT(resposta2) as excelente FROM respostas WHERE resposta2 = 'Excelente'";
+    $queryBom = "SELECT COUNT(resposta2) as bom FROM respostas WHERE resposta2 = 'Bom'";
+    $queryRegular = "SELECT COUNT(resposta2) as regular FROM respostas WHERE resposta2 = 'Regular'";
+    $queryRuim = "SELECT COUNT(resposta2) as ruim FROM respostas WHERE resposta2 = 'Ruim'";
+  
+    $stmtExcelente =  $this->execute($queryExcelente);
+    $stmtBom = $this->execute($queryBom);
+    $stmtRegular = $this->execute($queryRegular);
+    $stmtRuim = $this->execute($queryRuim);
+  
+    $excelenteCount = $stmtExcelente->fetch(PDO::FETCH_ASSOC)['excelente'];
+    $bomCount = $stmtBom->fetch(PDO::FETCH_ASSOC)['bom'];
+    $regularCount = $stmtRegular->fetch(PDO::FETCH_ASSOC)['regular'];
+    $ruimCount = $stmtRuim->fetch(PDO::FETCH_ASSOC)['ruim'];
+  
+    return array(
+      'Excelente' => $excelenteCount,
+      'Bom' => $bomCount,
+      'Regular' => $regularCount,
+      'Ruim' => $ruimCount
+    );
+  }
+
+  ##PERGUNTA 3: O atendente conseguiu responder suas perguntas e resolver seus problemas de forma satisfatória?
+
+  public function countRespostas3($connection) {
+    $queryExcelente = "SELECT COUNT(resposta3) as excelente FROM respostas WHERE resposta3 = 'Excelente'";
+    $queryBom = "SELECT COUNT(resposta3) as bom FROM respostas WHERE resposta3 = 'Bom'";
+    $queryRegular = "SELECT COUNT(resposta3) as regular FROM respostas WHERE resposta3 = 'Regular'";
+    $queryRuim = "SELECT COUNT(resposta3) as ruim FROM respostas WHERE resposta3 = 'Ruim'";
+  
+    $stmtExcelente =  $this->execute($queryExcelente);
+    $stmtBom = $this->execute($queryBom);
+    $stmtRegular = $this->execute($queryRegular);
+    $stmtRuim = $this->execute($queryRuim);
+  
+    $excelenteCount = $stmtExcelente->fetch(PDO::FETCH_ASSOC)['excelente'];
+    $bomCount = $stmtBom->fetch(PDO::FETCH_ASSOC)['bom'];
+    $regularCount = $stmtRegular->fetch(PDO::FETCH_ASSOC)['regular'];
+    $ruimCount = $stmtRuim->fetch(PDO::FETCH_ASSOC)['ruim'];
+  
+    return array(
+      'Excelente' => $excelenteCount,
+      'Bom' => $bomCount,
+      'Regular' => $regularCount,
+      'Ruim' => $ruimCount
+    );
+  }
+
+  ##PERGUNTA 4: O tempo de espera para ser atendido foi adequado?
+
+  public function countRespostas4($connection) {
+    $queryExcelente = "SELECT COUNT(resposta4) as excelente FROM respostas WHERE resposta4 = 'Excelente'";
+    $queryBom = "SELECT COUNT(resposta4) as bom FROM respostas WHERE resposta4 = 'Bom'";
+    $queryRegular = "SELECT COUNT(resposta4) as regular FROM respostas WHERE resposta4 = 'Regular'";
+    $queryRuim = "SELECT COUNT(resposta4) as ruim FROM respostas WHERE resposta4 = 'Ruim'";
+  
+    $stmtExcelente =  $this->execute($queryExcelente);
+    $stmtBom = $this->execute($queryBom);
+    $stmtRegular = $this->execute($queryRegular);
+    $stmtRuim = $this->execute($queryRuim);
+  
+    $excelenteCount = $stmtExcelente->fetch(PDO::FETCH_ASSOC)['excelente'];
+    $bomCount = $stmtBom->fetch(PDO::FETCH_ASSOC)['bom'];
+    $regularCount = $stmtRegular->fetch(PDO::FETCH_ASSOC)['regular'];
+    $ruimCount = $stmtRuim->fetch(PDO::FETCH_ASSOC)['ruim'];
+  
+    return array(
+      'Excelente' => $excelenteCount,
+      'Bom' => $bomCount,
+      'Regular' => $regularCount,
+      'Ruim' => $ruimCount
+    );
+  }
+
+  ##PERGUNTA 5: O atendimento foi realizado de forma cordial e respeitosa?
+
+  public function countRespostas5($connection) {
+    $queryExcelente = "SELECT COUNT(resposta5) as excelente FROM respostas WHERE resposta5 = 'Excelente'";
+    $queryBom = "SELECT COUNT(resposta5) as bom FROM respostas WHERE resposta5 = 'Bom'";
+    $queryRegular = "SELECT COUNT(resposta5) as regular FROM respostas WHERE resposta5 = 'Regular'";
+    $queryRuim = "SELECT COUNT(resposta5) as ruim FROM respostas WHERE resposta5 = 'Ruim'";
+  
+    $stmtExcelente =  $this->execute($queryExcelente);
+    $stmtBom = $this->execute($queryBom);
+    $stmtRegular = $this->execute($queryRegular);
+    $stmtRuim = $this->execute($queryRuim);
+  
+    $excelenteCount = $stmtExcelente->fetch(PDO::FETCH_ASSOC)['excelente'];
+    $bomCount = $stmtBom->fetch(PDO::FETCH_ASSOC)['bom'];
+    $regularCount = $stmtRegular->fetch(PDO::FETCH_ASSOC)['regular'];
+    $ruimCount = $stmtRuim->fetch(PDO::FETCH_ASSOC)['ruim'];
+  
+    return array(
+      'Excelente' => $excelenteCount,
+      'Bom' => $bomCount,
+      'Regular' => $regularCount,
+      'Ruim' => $ruimCount
+    );
+  }
+
+  ##PERGUNTA 6: O atendente ofereceu alternativas ou soluções criativas para o seu problema?
+
+  public function countRespostas6($connection) {
+    $queryExcelente = "SELECT COUNT(resposta6) as excelente FROM respostas WHERE resposta6 = 'Excelente'";
+    $queryBom = "SELECT COUNT(resposta6) as bom FROM respostas WHERE resposta6 = 'Bom'";
+    $queryRegular = "SELECT COUNT(resposta6) as regular FROM respostas WHERE resposta6 = 'Regular'";
+    $queryRuim = "SELECT COUNT(resposta6) as ruim FROM respostas WHERE resposta6 = 'Ruim'";
+  
+    $stmtExcelente =  $this->execute($queryExcelente);
+    $stmtBom = $this->execute($queryBom);
+    $stmtRegular = $this->execute($queryRegular);
+    $stmtRuim = $this->execute($queryRuim);
+  
+    $excelenteCount = $stmtExcelente->fetch(PDO::FETCH_ASSOC)['excelente'];
+    $bomCount = $stmtBom->fetch(PDO::FETCH_ASSOC)['bom'];
+    $regularCount = $stmtRegular->fetch(PDO::FETCH_ASSOC)['regular'];
+    $ruimCount = $stmtRuim->fetch(PDO::FETCH_ASSOC)['ruim'];
+  
+    return array(
+      'Excelente' => $excelenteCount,
+      'Bom' => $bomCount,
+      'Regular' => $regularCount,
+      'Ruim' => $ruimCount
+    );
+  }
+
+
+  ##PERGUNTA 7: O atendimento atendeu às suas expectativas?
+
+  public function countRespostas7($connection) {
+    $queryExcelente = "SELECT COUNT(resposta7) as excelente FROM respostas WHERE resposta7 = 'Excelente'";
+    $queryBom = "SELECT COUNT(resposta7) as bom FROM respostas WHERE resposta7 = 'Bom'";
+    $queryRegular = "SELECT COUNT(resposta7) as regular FROM respostas WHERE resposta7 = 'Regular'";
+    $queryRuim = "SELECT COUNT(resposta7) as ruim FROM respostas WHERE resposta7 = 'Ruim'";
+  
+    $stmtExcelente =  $this->execute($queryExcelente);
+    $stmtBom = $this->execute($queryBom);
+    $stmtRegular = $this->execute($queryRegular);
+    $stmtRuim = $this->execute($queryRuim);
+  
+    $excelenteCount = $stmtExcelente->fetch(PDO::FETCH_ASSOC)['excelente'];
+    $bomCount = $stmtBom->fetch(PDO::FETCH_ASSOC)['bom'];
+    $regularCount = $stmtRegular->fetch(PDO::FETCH_ASSOC)['regular'];
+    $ruimCount = $stmtRuim->fetch(PDO::FETCH_ASSOC)['ruim'];
+  
+    return array(
+      'Excelente' => $excelenteCount,
+      'Bom' => $bomCount,
+      'Regular' => $regularCount,
+      'Ruim' => $ruimCount
+    );
+  }
+
+  ##PERGUNTA 8: Quais as chances de você indicar o centro de formação SENAI, para um amigo ou familiar?
+
+  public function countRespostas8($connection) {
+    $queryExcelente = "SELECT COUNT(resposta8) as excelente FROM respostas WHERE resposta8 = 'Excelente'";
+    $queryBom = "SELECT COUNT(resposta8) as bom FROM respostas WHERE resposta8 = 'Bom'";
+    $queryRegular = "SELECT COUNT(resposta8) as regular FROM respostas WHERE resposta8 = 'Regular'";
+    $queryRuim = "SELECT COUNT(resposta8) as ruim FROM respostas WHERE resposta8 = 'Ruim'";
+  
+    $stmtExcelente =  $this->execute($queryExcelente);
+    $stmtBom = $this->execute($queryBom);
+    $stmtRegular = $this->execute($queryRegular);
+    $stmtRuim = $this->execute($queryRuim);
+  
+    $excelenteCount = $stmtExcelente->fetch(PDO::FETCH_ASSOC)['excelente'];
+    $bomCount = $stmtBom->fetch(PDO::FETCH_ASSOC)['bom'];
+    $regularCount = $stmtRegular->fetch(PDO::FETCH_ASSOC)['regular'];
+    $ruimCount = $stmtRuim->fetch(PDO::FETCH_ASSOC)['ruim'];
+  
+    return array(
+      'Excelente' => $excelenteCount,
+      'Bom' => $bomCount,
+      'Regular' => $regularCount,
+      'Ruim' => $ruimCount
+    );
+  }
+
 }
