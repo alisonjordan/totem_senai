@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 use \App\Entity\Resposta;
 
@@ -14,5 +14,5 @@ $respostas7 = Resposta::getRespostas7();
 $respostas8 = Resposta::getRespostas8();
 
 include __DIR__.'/includes/header.php';
-include __DIR__.'/includes/home.php';
+include __DIR__.'/includes/relatorio.php';
 include __DIR__.'/includes/footer.php';

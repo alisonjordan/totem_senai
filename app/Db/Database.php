@@ -157,6 +157,32 @@ class Database{
     return true;
   }
 
+  ############ MÉTODO PARA REALIZAR LOGIN ####################################
+  public function realizarLogin($usuario, $senha) {
+    try {
+        $query = "SELECT * FROM usuarios WHERE usuario = :usuario AND senha = :senha";
+        $stmt = $this->connection->prepare($query);
+        $stmt->bindValue(':usuario', $usuario);
+        $stmt->bindValue(':senha', $senha);
+        $stmt->execute();
+
+        if ($stmt->rowCount() > 0) {
+            // Login bem-sucedido
+            return true;
+        } else {
+            // Login falhou
+            return false;
+        }
+    } catch (PDOException $e) {
+        echo 'Erro no login: ' . $e->getMessage();
+        exit;
+    }
+}
+
+    
+
+
+
 
 
 ############ AQUI COMEÇAM AS CONSULTAS PARA GERAÇÃO DE RELATÓRIO ####################################
