@@ -1,18 +1,21 @@
-<main>
 
 
 
+
+                
   <div class="login-page">
         <div class="login-logo">
-            <a href="#"><b>Admin</b>LTE</a>
+        <img src="css/img/logototem.png" alt="AdminLTE Logo" height="200" width="200">
+        <p>
+            <a href="#">Área Restrita</a>
         </div>
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Faça login para iniciar a sessão</p>
 
-                <?php if (isset($error)): ?>
-                    <div class="alert alert-danger"><?php echo $error; ?></div>
-                <?php endif; ?>
+                
+                    <?php echo $error; ?>
+                
 
                 <form action="" method="post">
                     <div class="input-group mb-3">
@@ -32,6 +35,10 @@
                             <button type="submit" class="btn btn-primary btn-block">Entrar</button>
                         </div>
                     </div>
+
+
+                    
+
                 </form>
             </div>
         </div>
@@ -39,16 +46,3 @@
 
 
   
-
- 
-
-
-
-  
-
-
-
-
-
-
-</main>

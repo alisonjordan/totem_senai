@@ -6824,6 +6824,10 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   background-color: #007bff !important;
 }
 
+.bg-senai {
+  background-color: #9DD1F3 !important;
+}
+
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
@@ -11752,6 +11756,7 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
 
 .content-wrapper {
   background-color: #f4f6f9;
+  
 }
 
 .content-wrapper > .content {
@@ -33482,6 +33487,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   color: #fff;
 }
 
+
 .info-box .info-box .bg-primary .progress-bar,
 .info-box .info-box .bg-gradient-primary .progress-bar {
   background-color: #fff;
@@ -33502,6 +33508,8 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   color: #fff;
 }
 
+.info-box .info-box .bg-senai
+
 .info-box .info-box .bg-success .progress-bar,
 .info-box .info-box .bg-gradient-success .progress-bar {
   background-color: #fff;
@@ -33511,6 +33519,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 .info-box .info-box .bg-gradient-info {
   color: #fff;
 }
+
 
 .info-box .info-box .bg-info .progress-bar,
 .info-box .info-box .bg-gradient-info .progress-bar {
