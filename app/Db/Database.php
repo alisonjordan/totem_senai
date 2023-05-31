@@ -157,6 +157,54 @@ class Database{
     return true;
   }
 
+
+  public function atualizaFlag($flag) {
+    try {
+        $query = "UPDATE flags SET flag = :flag WHERE id_flag = 1";
+        $stmt = $this->connection->prepare($query);
+        $stmt->bindValue(':flag', $flag);
+        $stmt->execute();
+
+        if ($stmt->rowCount() > 0) {
+            
+            return true;
+        } else {
+            
+            return false;
+        }
+    } catch (PDOException $e) {
+        echo 'Erro ao liberar formulário ' . $e->getMessage();
+        exit;
+    }
+}
+
+
+public function obterFlag($flag) {
+  try {
+      $query = "SELECT flag FROM flags WHERE id_flag = :flag";
+      $stmt = $this->connection->prepare($query);
+      $stmt->bindValue(':flag', $flag);
+      $stmt->execute();
+
+      $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+
+      if ($resultado) {
+          return $resultado['flag'];
+      } else {
+          return null;
+      }
+  } catch (PDOException $e) {
+      echo 'Erro ao obter a flag' . $e->getMessage();
+      exit;
+  }
+}
+
+
+
+
+
+
+
   ############ MÉTODO PARA REALIZAR LOGIN ####################################
   public function realizarLogin($usuario, $senha) {
     try {
@@ -178,6 +226,8 @@ class Database{
         exit;
     }
 }
+
+
 
     
 

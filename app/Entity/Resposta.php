@@ -139,7 +139,10 @@ class Resposta{
    * @param  integer $id
    * @return Resposta
    */
-  public static function getResposta($id){
+  
+   
+  
+   public static function getResposta($id){
     return (new Database('respostas'))->select('id = '.$id)
                                   ->fetchObject(self::class);
   }
@@ -147,6 +150,9 @@ class Resposta{
   public static function getRespostas1(){
     return (new Database('respostas'))->countRespostas1($connection = null);
   }
+
+
+
 
   public static function getRespostas2(){
     return (new Database('respostas'))->countRespostas2($connection = null);

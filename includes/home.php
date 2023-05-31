@@ -16,23 +16,24 @@
 ?>
 <main>
 
-  <?=$mensagem?>
+<div class="d-flex justify-content-center">
 
-  <section>
-    <a href="cadastrar.php">
-      <button class="btn btn-success">Responder formulário</button>
-    </a>
-  </section>
-
- 
+<?=$mensagem?>
+  
+  
+  </div>
 
 
+
+
+  <div class="d-flex justify-content-center">
+  <h2>Aguarde o formulário ser liberado <br> para avaliar nosso atendimento...</h2>
+  
+  
+  </div>
+
+      
 
   
-
-
-
-
-
 
 </main>

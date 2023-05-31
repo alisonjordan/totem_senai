@@ -12,9 +12,6 @@
 
 </head>
   <body>
-    <div class="container">
-        <div class="jumbotron bg-danger">
-            <h1>Sua opinião importa!</h1>
-</div>
+    
     
   

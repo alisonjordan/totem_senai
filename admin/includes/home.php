@@ -1,4 +1,23 @@
- <!-- Conteúdo principal -->
+<?php
+
+  $mensagem = '';
+  if(isset($_GET['status'])){
+    switch ($_GET['status']) {
+      case 'success':
+        $mensagem = '<div class="alert alert-success">Formulário liberado!</div>';
+        break;
+
+      case 'error':
+        $mensagem = '<div class="alert alert-danger">Algo deu errado!</div>';
+        break;
+    }
+  }
+
+?> 
+
+
+
+<!-- Conteúdo principal -->
  <div class="content-wrapper">
             <section class="content">
                 
@@ -8,6 +27,48 @@
                     
                 </div>
             </section>
+
+            <section class="content">
+
+    <div class="text-center">
+      
+        <div class="col">
+        <div class="col-md-12">
+        
+        <?=$mensagem?>
+                <p>
+                </div>
+        </div>
+        
+    </div>
+
+    
+    
+    </section>
+
+
+    <section class="content">
+<form action="" method="post">
+
+<input type="hidden" name="flag" class="form-control" value=1>
+    <div class="text-center">
+      
+        <div class="col">
+        <div class="col-md-12">
+        <button type="submit" class="btn btn-primary">Liberar formulário para avaliação de atendimento.</button>
+                <p>
+                </div>
+        </div>
+        
+    </div>
+
+    </form>
+    
+    </section>
+
+
+
+
 
 <section class="content">
 
@@ -151,23 +212,12 @@
 
 </section>
 
-<section class="content">
+<?php echo $error; ?>
 
-<div class="text-center">
-  
-    <div class="col">
-    <div class="col-md-12">
-              <button type="button" class="btn btn-primary disabled">Liberar Questionário</button>
-            <p>
-            </div>
-    </div>
+
+
     
-</div>
-
-</section>
-
-
-
+   
 
  </div>
 

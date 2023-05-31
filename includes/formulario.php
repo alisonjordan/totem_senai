@@ -1,24 +1,16 @@
 <main>
-
-
-
-
-  <section>
-    <a href="index.php">
-      <button class="btn btn-success">Cancelar</button>
-    </a>
-  </section>
-
+  
+<div class="d-flex justify-content-center">
   <h2 class="mt-3"><?=TITLE?></h2>
+  </div>
+
+
 
   <form method="post">
-  <div class="row">
-    <!--PERGUNTA 1-->
-    <div class="col-sm">
-    </div>
-
-
-    <div id="div_pergunta1" class="form-group col-3">
+  
+  <!--PERGUNTA 1-->
+  <div class="d-flex justify-content-center">
+      <div id="div_pergunta1" class="form-group col-3">
       <label>Como você avalia a qualidade do atendimento que recebeu?</label>
 
       <p>
@@ -48,17 +40,13 @@
             </label>        
     </div>
 
-    <div class="col-sm">
     </div>
-    
-  
-  </div>
 
-  <div class="row">
+
+
     <!--PERGUNTA 2-->
 
-    <div class="col-sm">
-    </div>
+    <div class="d-flex justify-content-center">
 
 
     <div id="div_pergunta2" style="display: none;" class="form-group col-3">
@@ -93,15 +81,14 @@
      
     </div>
 
-    <div class="col-sm">
     </div>
 
-    </div>
 
-    <div class="row">
+
+
+    
     <!--PERGUNTA 3-->
-    <div class="col-sm">
-    </div>
+    <div class="d-flex justify-content-center">
 
     <div id="div_pergunta3" style="display: none;" class="form-group col-3">
       <label>O atendente conseguiu responder suas perguntas e resolver seus problemas de forma satisfatória?</label>
@@ -132,21 +119,14 @@
               <input type="radio" class="btn-check" name="resposta3" value="Ruim" > Ruim
             </label>
           
-      
-
-    </div>
-
-    <div class="col-sm">
-    </div>
+     </div>
     
-  
   </div>
 
 
-    <div class="row">
+  
     <!--PERGUNTA 4-->
-    <div class="col-sm">
-    </div>
+    <div class="d-flex justify-content-center">
 
 
     <div id="div_pergunta4" style="display: none;" class="form-group col-3">
@@ -180,19 +160,16 @@
           
       
 
-    </div>
-
-    <div class="col-sm">
+    
     </div>
     
   
   </div>
 
 
-    <div class="row">
+    
     <!--PERGUNTA 5-->
-    <div class="col-sm">
-    </div>
+    <div class="d-flex justify-content-center">
 
 
     <div id="div_pergunta5" style="display: none;" class="form-group col-3">
@@ -226,19 +203,16 @@
         
       
 
-    </div>
-
-    <div class="col-sm">
+    
     </div>
     
   
   </div>
 
 
-    <div class="row">
+    
     <!--PERGUNTA 6-->
-    <div class="col-sm">
-    </div>
+    <div class="d-flex justify-content-center">
 
 
     <div id="div_pergunta6" style="display: none;" class="form-group col-3">
@@ -274,17 +248,14 @@
 
     </div>
 
-    <div class="col-sm">
-    </div>
-    
+     
   
   </div>
 
 
-    <div class="row">
+    
     <!--PERGUNTA 7-->
-    <div class="col-sm">
-    </div>
+    <div class="d-flex justify-content-center">
 
 
     <div id="div_pergunta7" style="display: none;" class="form-group col-3">
@@ -320,16 +291,13 @@
 
     </div>
 
-    <div class="col-sm">
-    </div>
-    
+     
   
   </div>
 
-    <div class="row">
+    
     <!--PERGUNTA 8-->
-    <div class="col-sm">
-    </div>
+    <div class="d-flex justify-content-center">
 
 
     <div id="div_pergunta8" style="display: none;" class="form-group col-3">
@@ -365,16 +333,17 @@
 
     </div>
 
-    <div class="col-sm">
-    </div>
-    
+        
   
   </div>
 
-    
+  <div class="d-flex justify-content-center">
+
     <div id="div_submit" style="display: none;" class="form-group">
-      <button type="submit" class="btn btn-success">Enviar</button>
+      <button type="submit" class="btn btn-success">Finalizar</button>
     </div>
+
+  </div>
 
   </form>
 
