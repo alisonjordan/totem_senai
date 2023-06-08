@@ -17,8 +17,13 @@
 
 
 
+
+
 <!-- Conteúdo principal -->
  <div class="content-wrapper">
+
+
+
             <section class="content">
                 
                 
@@ -84,12 +89,16 @@
   <span class="info-box-icon"><i class="fa fa-comments"></i></span>
   <div class="info-box-content">
     <span class="info-box-text">PERGUNTA 1: Como você avalia a qualidade <br>  do atendimento que recebeu?</span>
-    <span class="info-box-number"><?php echo "Excelente: " . $respostas1['Excelente'];?></span>
-    <span class="info-box-number"><?php echo "Bom: " . $respostas1['Bom'];?></span>
-    <span class="info-box-number"><?php echo "Regular: " . $respostas1['Regular'];?></span>
-    <span class="info-box-number"><?php echo "Ruim: " . $respostas1['Ruim'];?></span>
+    <input type="text" id="excelente1" hidden value=<?php echo $respostas1['Excelente'];?>>
+    <input type="text" id="bom1" hidden value=<?php echo $respostas1['Bom'];?>>
+    <input type="text" id="regular1" hidden value=<?php echo $respostas1['Regular'];?>>
+    <input type="text" id="ruim1" hidden value=<?php echo $respostas1['Ruim'];?>>
+    
+
+    <canvas id="myChart"></canvas>
     
   </div>
+ 
 </div>
 
 </div>
@@ -100,10 +109,13 @@
   <span class="info-box-icon"><i class="fa fa-comments"></i></span>
   <div class="info-box-content">
     <span class="info-box-text">PERGUNTA 2: O atendente foi prestativo e solícito <br>  em ajudar com suas questões e problemas?</span>
-    <span class="info-box-number"><?php echo "Excelente: " . $respostas2['Excelente'];?></span>
-    <span class="info-box-number"><?php echo "Bom: " . $respostas2['Bom'];?></span>
-    <span class="info-box-number"><?php echo "Regular: " . $respostas2['Regular'];?></span>
-    <span class="info-box-number"><?php echo "Ruim: " . $respostas2['Ruim'];?></span>
+    <input type="text" id="excelente2" hidden value=<?php echo $respostas2['Excelente'];?>>
+    <input type="text" id="bom2" hidden value=<?php echo $respostas2['Bom'];?>>
+    <input type="text" id="regular2" hidden value=<?php echo $respostas2['Regular'];?>>
+    <input type="text" id="ruim2" hidden value=<?php echo $respostas2['Ruim'];?>>
+    
+
+    <canvas id="myChart2"> </canvas>
     
   </div>
 </div>
@@ -116,10 +128,13 @@
   <span class="info-box-icon"><i class="fa fa-comments"></i></span>
   <div class="info-box-content">
     <span class="info-box-text">PERGUNTA 3: O atendente conseguiu responder suas  <br> perguntas e resolver seus problemas de forma satisfatória?</span>
-    <span class="info-box-number"><?php echo "Excelente: " . $respostas3['Excelente'];?></span>
-    <span class="info-box-number"><?php echo "Bom: " . $respostas3['Bom'];?></span>
-    <span class="info-box-number"><?php echo "Regular: " . $respostas3['Regular'];?></span>
-    <span class="info-box-number"><?php echo "Ruim: " . $respostas3['Ruim'];?></span>
+    <input type="text" id="excelente3" hidden value=<?php echo $respostas3['Excelente'];?>>
+    <input type="text" id="bom3" hidden value=<?php echo $respostas3['Bom'];?>>
+    <input type="text" id="regular3" hidden value=<?php echo $respostas3['Regular'];?>>
+    <input type="text" id="ruim3" hidden value=<?php echo $respostas3['Ruim'];?>>
+    
+
+    <canvas id="myChart3"> </canvas>
     
   </div>
 </div>
@@ -132,11 +147,14 @@
   <span class="info-box-icon"><i class="fa fa-comments"></i></span>
   <div class="info-box-content">
     <span class="info-box-text">PERGUNTA 4: O tempo de espera para <br>  ser atendido foi adequado?</span>
-    <span class="info-box-number"><?php echo "Excelente: " . $respostas4['Excelente'];?></span>
-    <span class="info-box-number"><?php echo "Bom: " . $respostas4['Bom'];?></span>
-    <span class="info-box-number"><?php echo "Regular: " . $respostas4['Regular'];?></span>
-    <span class="info-box-number"><?php echo "Ruim: " . $respostas4['Ruim'];?></span>
+    <input type="text" id="excelente4" hidden value=<?php echo $respostas4['Excelente'];?>>
+    <input type="text" id="bom4" hidden value=<?php echo $respostas4['Bom'];?>>
+    <input type="text" id="regular4" hidden value=<?php echo $respostas4['Regular'];?>>
+    <input type="text" id="ruim4" hidden value=<?php echo $respostas4['Ruim'];?>>
     
+
+    <canvas id="myChart4"></canvas>
+  
   </div>
 </div>
 
@@ -148,11 +166,14 @@
   <span class="info-box-icon"><i class="fa fa-comments"></i></span>
   <div class="info-box-content">
     <span class="info-box-text">PERGUNTA 5: O atendimento foi realizado <br> de forma cordial e respeitosa?</span>
-    <span class="info-box-number"><?php echo "Excelente: " . $respostas5['Excelente'];?></span>
-    <span class="info-box-number"><?php echo "Bom: " . $respostas5['Bom'];?></span>
-    <span class="info-box-number"><?php echo "Regular: " . $respostas5['Regular'];?></span>
-    <span class="info-box-number"><?php echo "Ruim: " . $respostas5['Ruim'];?></span>
+    <input type="text" id="excelente5" hidden value=<?php echo $respostas5['Excelente'];?>>
+    <input type="text" id="bom5" hidden value=<?php echo $respostas5['Bom'];?>>
+    <input type="text" id="regular5" hidden value=<?php echo $respostas5['Regular'];?>>
+    <input type="text" id="ruim5" hidden value=<?php echo $respostas5['Ruim'];?>>
     
+
+    <canvas id="myChart5"></canvas>
+
   </div>
 </div>
 
@@ -164,11 +185,14 @@
   <span class="info-box-icon"><i class="fa fa-comments"></i></span>
   <div class="info-box-content">
     <span class="info-box-text">PERGUNTA 6: O atendente ofereceu alternativas <br> ou soluções criativas para o seu problema?</span>
-    <span class="info-box-number"><?php echo "Excelente: " . $respostas6['Excelente'];?></span>
-    <span class="info-box-number"><?php echo "Bom: " . $respostas6['Bom'];?></span>
-    <span class="info-box-number"><?php echo "Regular: " . $respostas6['Regular'];?></span>
-    <span class="info-box-number"><?php echo "Ruim: " . $respostas6['Ruim'];?></span>
+    <input type="text" id="excelente6" hidden value=<?php echo $respostas6['Excelente'];?>>
+    <input type="text" id="bom6" hidden value=<?php echo $respostas6['Bom'];?>>
+    <input type="text" id="regular6" hidden value=<?php echo $respostas6['Regular'];?>>
+    <input type="text" id="ruim6" hidden value=<?php echo $respostas6['Ruim'];?>>
     
+
+    <canvas id="myChart6"></canvas>
+
   </div>
 </div>
 
@@ -180,11 +204,14 @@
   <span class="info-box-icon"><i class="fa fa-comments"></i></span>
   <div class="info-box-content">
     <span class="info-box-text">PERGUNTA 7: O atendimento atendeu às <br> suas expectativas? </span>
-    <span class="info-box-number"><?php echo "Excelente: " . $respostas7['Excelente'];?></span>
-    <span class="info-box-number"><?php echo "Bom: " . $respostas7['Bom'];?></span>
-    <span class="info-box-number"><?php echo "Regular: " . $respostas7['Regular'];?></span>
-    <span class="info-box-number"><?php echo "Ruim: " . $respostas7['Ruim'];?></span>
+    <input type="text" id="excelente7" hidden value=<?php echo $respostas7['Excelente'];?>>
+    <input type="text" id="bom7" hidden value=<?php echo $respostas7['Bom'];?>>
+    <input type="text" id="regular7" hidden value=<?php echo $respostas7['Regular'];?>>
+    <input type="text" id="ruim7" hidden value=<?php echo $respostas7['Ruim'];?>>
     
+
+    <canvas id="myChart7"> </canvas>
+
   </div>
 </div>
 
@@ -196,11 +223,14 @@
   <span class="info-box-icon"><i class="fa fa-comments"></i></span>
   <div class="info-box-content">
     <span class="info-box-text">PERGUNTA 8: Quais as chances de você indicar o centro <br> de formação SENAI, para um amigo ou familiar?</span>
-    <span class="info-box-number"><?php echo "Excelente: " . $respostas8['Excelente'];?></span>
-    <span class="info-box-number"><?php echo "Bom: " . $respostas8['Bom'];?></span>
-    <span class="info-box-number"><?php echo "Regular: " . $respostas8['Regular'];?></span>
-    <span class="info-box-number"><?php echo "Ruim: " . $respostas8['Ruim'];?></span>
-   
+    <input type="text" id="excelente8" hidden value=<?php echo $respostas8['Excelente'];?>>
+    <input type="text" id="bom8" hidden value=<?php echo $respostas8['Bom'];?>>
+    <input type="text" id="regular8" hidden value=<?php echo $respostas8['Regular'];?>>
+    <input type="text" id="ruim8" hidden value=<?php echo $respostas8['Ruim'];?>>
+    
+
+    <canvas id="myChart8"></canvas>
+
   </div>
 </div>
 
